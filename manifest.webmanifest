@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (未使用だが念のため)
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# 一時ファイル・サンプル
+tmp/
+*.log
+sample/
+*.cbz
+*.zip
