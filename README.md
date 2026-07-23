@@ -32,8 +32,10 @@
   button{font-family:inherit;}
 
   /* ---------- ホーム ---------- */
-  #home{position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:20px; padding:calc(24px + var(--safe-t)) 22px calc(24px + var(--safe-b)); text-align:center;}
+  /* 上寄せ＋スクロール可：小さい画面やSafariのバーがあってもボタンが必ず見えるように */
+  #home{position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+    gap:18px; padding:calc(var(--safe-t) + 6vh) 22px calc(var(--safe-b) + 28px); text-align:center;
+    overflow-y:auto; -webkit-overflow-scrolling:touch; touch-action:pan-y;}
   #home h1{margin:0; font-size:27px; letter-spacing:.05em; font-weight:800;}
   #home h1 .m{color:var(--accent);}
   #home .sub{color:var(--dim); font-size:12px; letter-spacing:.14em; margin-top:-8px;}
